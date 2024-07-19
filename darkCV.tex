@@ -1,0 +1,210 @@
+%-------------------------
+% Resume in Latex
+% Author : Wilmer Gonzalez
+% Based on: Sourabh Bajaj repo
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% Page coloring, fonts, and logos
+\usepackage{pagecolor}
+\usepackage{lato}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{fontawesome}
+% ---
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% ---
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{1pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+% ---
+
+% Custom commands
+
+\newcommand{\sepsection}{\vspace{25pt}}
+
+\newcommand{\resumeItem}[1]{%2
+	\item\small{
+		%\textbf{#1}
+		#1
+		%{: #2 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{8pt}\item%-1
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+	\vspace{1pt}
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeTech}[2]{
+	\underline{#1:} #2
+}
+
+% COLOR THEMES SELECTION
+
+% For Light theme un-comment this and comment the Dark theme section below
+%\colorlet{textcolor}{black}
+%\colorlet{urlcolor}{blue}
+%\newcommand{\otherThemeRef}{\href{https://github.com/wilmeragsgh/resume/raw/master/wilmer_gonzalez_dark.pdf}{
+% Dark \color{urlcolor}{\faicon{lightbulb-o}}}}
+%\newcommand{\latestVersion}{\href{https://github.com/wilmeragsgh/resume/raw/master/wilmer_gonzalez_light.pdf}{Latest
+% \color{urlcolor}{\faicon{refresh}}}}
+
+%\begin{document}
+	% ---
+	
+	% For Dark theme un-comment this and comment the Light theme section above
+	 \colorlet{textcolor}{white!80!gray}
+	 \colorlet{backgroundcolor}{black!30!gray}
+	 \colorlet{urlcolor}{blue!25!white}
+	 \AtBeginDocument{\color{textcolor}}
+	 \newcommand{\otherThemeRef}{\href{https://github.com/JPBerea/CV/blob/master/lightCV.pdf}{Light
+	  \color{urlcolor}{\faicon{lightbulb-o}}}}
+	 \newcommand{\latestVersion}{\href{https://github.com/wilmeragsgh/resume/raw/master/wilmer_gonzalez_dark.pdf}{Latest
+	  \color{urlcolor}{\faicon{refresh}}}}
+	
+	 \begin{document}
+		 \pagecolor{backgroundcolor}
+		% ---
+		
+		% HEADING
+		\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+			\textbf{\Large Juan Pablo Cueva Berea}\\ 
+			%\href{https:wilmerags.com}{\color{urlcolor} \faicon{link}}
+			Estudiante de la licenciatura en Matemáticas & 
+			\href{mailto:jpberea52@gmail.com}{\color{urlcolor}{\faicon{envelope}}\color{textcolor}
+			 jpberea52@gmail.com} \\
+			\textsl{CDMX, México.} & 
+			\href{https://www.linkedin.com/in/jpberea/}{ 
+				\color{urlcolor}{\faicon{linkedin}} \color{textcolor} jpberea} 
+				\\
+			%\textsl{\small \latestVersion} /
+			\textsl{\small \otherThemeRef} & 
+			
+		\end{tabular*}
+		
+		% EXPERIENCE
+		\section{Experiencia}
+		\resumeSubHeadingListStart
+		
+		\resumeSubheading
+		{IMASS}{CDMX, México}
+		{Servicio Social}{Febrero 2023 - Presente}
+		\resumeItemListStart
+		\resumeItem{Implementé algoritmos de análisis estadístico bayesiano.}
+		\resumeItem{Gestiono el versionado de paquetería de código libre.}
+		\resumeItem{Realicé investigación y recolección bibliográfica.}
+		\resumeItemListEnd
+		\resumeTech{Technologías}{Julia, GIT, Mendeley, Python.}\\
+		\sepsection
+		\resumeSubHeadingListEnd
+		%--
+		
+		% EDUCATION
+		\section{Educación}
+		\resumeSubHeadingListStart
+		\resumeSubheading
+		{Licenciatura en Matemáticas}{CDMX, México}
+		{Facultad de Ciencias, UNAM}{Fecha estimada de graduación: noviembre 
+		2024}
+		\resumeItemListStart
+		\resumeItem{Análisis Estadístico}
+		\resumeItem{Análisis y Visualización de Datos}
+		\resumeItem{Análisis y Optimización de Algoritmos}
+		\resumeItem{Teoría de la Probabilidad}
+		\resumeItemListEnd
+		\resumeSubheading
+		{Cursos Avanzados de Inglés}{CDMX, México}
+		{ENALLT}{septiembre 2021 - mayo 2022}
+		\resumeItemListStart
+		\resumeItem{Dominio de Inglés (C1)}
+		\resumeItem{Comprensión y producción escrita y hablada}
+		\resumeItemListEnd
+		\resumeSubHeadingListEnd
+		% ---
+		
+		% CERTIFICATIONS
+		\section{Certificaciones \color{urlcolor}{(con link)}}
+		\resumeSubHeadingListStart
+		\resumeSubheading{Azure Fundamentals AZ900}{Microsoft}
+		{\href{https://www.certiport.com/portal/pages/credentialverification.aspx}{Verificación:wnRFY-48Eq}}{Junio
+			2021}
+		\resumeSubHeadingListEnd
+		
+		% PROGRAMMING SKILLS
+		\section{Habilidades Técnicas}
+		
+		\resumeSubHeadingListStart
+		
+		\resumeSubItem{\textbf{Lenguajes de programación:} Java, Python, R, 
+		Julia}
+		
+		\resumeSubItem{\textbf{Bibliotecas para análisis de datos:} Pandas, 
+		NumPy, 
+			Tidyverse}
+		
+		\resumeSubItem{\textbf{Manejo de base de datos:} MySQL, SQLite}
+		
+		\resumeSubItem{\textbf{Visualización de Datos:} Matplotlib, Ggplot2, 
+			Mathematica}
+		
+		\resumeSubItem{\textbf{Otras herramientas:} Excel, GIT, GitHub, Azure 
+		cloud, 
+			Jupyter notebooks}
+		
+		
+		\resumeSubHeadingListEnd
+		
+		% ---
+		
+		\vspace{1em}
+		
+		
+		% ---
+	\end{document}
