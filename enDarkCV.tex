@@ -1,0 +1,217 @@
+%-------------------------
+% Resume in Latex
+% Author : Wilmer Gonzalez
+% Based on: Sourabh Bajaj repo
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% Page coloring, fonts, and logos
+\usepackage{pagecolor}
+\usepackage{lato}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{fontawesome}
+% ---
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% ---
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{1pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+% ---
+
+% Custom commands
+
+\newcommand{\sepsection}{\vspace{25pt}}
+
+\newcommand{\resumeItem}[1]{%2
+	\item\small{
+		%\textbf{#1}
+		#1
+		%{: #2 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{8pt}\item%-1
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+	\vspace{1pt}
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeTech}[2]{
+	\underline{#1:} #2
+}
+
+% COLOR THEMES SELECTION
+
+% For Light theme un-comment this and comment the Dark theme section below
+%\colorlet{textcolor}{black}
+%\colorlet{urlcolor}{blue}
+%\newcommand{\otherThemeRef}{\href{https://github.com/wilmeragsgh/resume/raw/master/wilmer_gonzalez_dark.pdf}{
+		% Dark \color{urlcolor}{\faicon{lightbulb-o}}}}
+%\newcommand{\latestVersion}{\href{https://github.com/wilmeragsgh/resume/raw/master/wilmer_gonzalez_light.pdf}{Latest
+		% \color{urlcolor}{\faicon{refresh}}}}
+
+%\begin{document}
+% ---
+
+% For Dark theme un-comment this and comment the Light theme section above
+\colorlet{textcolor}{white!80!gray}
+\colorlet{backgroundcolor}{black!30!gray}
+\colorlet{urlcolor}{blue!25!white}
+\AtBeginDocument{\color{textcolor}}
+\newcommand{\otherThemeRef}{\href{https://github.com/JPBerea/CV/raw/master/enLightCV.pdf}{\color{urlcolor}Light
+ Theme {\faicon{lightbulb-o}}}}
+\newcommand{\latestVersion}{\href{https://github.com/JPBerea/CV/raw/master/enDarkCV.pdf}{\color{urlcolor}Latest
+ Version {\faicon{refresh}}}}
+\newcommand{\englishVersion}{\href{https://github.com/JPBerea/CV/raw/master/darkCV.pdf}{\color{urlcolor}Spanish
+		Version {\faicon{language}}}}
+
+\begin{document}
+	\pagecolor{backgroundcolor}
+	% ---
+	
+	% HEADING
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{\Large Juan Pablo Cueva Berea}\\ 
+		%\href{https:wilmerags.com}{\color{urlcolor} \faicon{link}}
+		Bachelor's Degree Student in Mathematics & 
+		\href{mailto:jpberea52@gmail.com}{\color{urlcolor}{\faicon{envelope}}\color{textcolor}
+			jpberea52@gmail.com} \\
+		\textsl{Mexico City, Mexico} & 
+		\href{https://www.linkedin.com/in/jpberea/}{ 
+			\color{urlcolor}{\faicon{linkedin}} \color{textcolor} jpberea} 
+		\\
+		\textsl{\small \latestVersion} /\textsl{\small 
+		\otherThemeRef}/\textsl{\small \englishVersion} & 
+		\color{urlcolor}\faicon{phone} \color{textcolor} 5515025888
+	\end{tabular*}
+	
+	% EXPERIENCE
+	\section{Experience}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{IMASS}{Mexico City, Mexico}
+	{Social Service}{February 2023 - May 2024}
+	\resumeItemListStart
+	\resumeItem{Implemented Bayesian statistical analysis algorithms.}
+	\resumeItem{Managed version control for open-source code packages.}
+	\resumeItem{Conducted research and bibliographic collection.}
+	\resumeItemListEnd
+	\resumeTech{Technologies}{Julia, GIT, Mendeley, Python}
+	\sepsection
+	\resumeSubHeadingListEnd
+	%--
+	% EDUCATION
+	\section{Education}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{Bachelor's Degree in Mathematics}{Mexico City, Mexico}
+	{Facultad de Ciencias, UNAM}{Completion Date: November 2024}
+	\resumeItemListStart
+	\resumeItem{Statistical Analysis}
+	\resumeItem{Data Analysis and Visualization}
+	\resumeItem{Algorithms Analysis and Optimization}
+	\resumeItem{Probability Theory}
+	\resumeItemListEnd
+	\resumeSubheading
+	{Advanced English Courses}{Mexico City, Mexico}
+	{ENALLT}{September 2021 - May 2022}
+	\resumeItemListStart
+	\resumeItem{Proficiency in English (C1)}
+	\resumeItem{Written and oral comprehension and production}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	% ---
+	
+	% CERTIFICATIONS
+	\section{Certifications \color{urlcolor}{(with link)}}
+	\resumeSubHeadingListStart
+	\resumeSubheading{Azure Fundamentals AZ900}{Microsoft}
+	{\href{https://www.certiport.com/portal/pages/credentialverification.aspx}{\color{urlcolor}Verification:wnRFY-48Eq}}{June
+		2021}
+	\resumeSubHeadingListEnd
+	
+	% PROGRAMMING SKILLS
+	\section{Technical Skills}
+	
+	\resumeSubHeadingListStart
+	
+	\resumeSubItem{\textbf{Programming Languages:} Proficient in Java, 
+		Python, R; intermediate in Julia}
+	
+	\resumeSubItem{\textbf{Data Analysis Libraries:} Pandas, 
+		NumPy, Tidyverse}
+	
+	\resumeSubItem{\textbf{Data Visualization:} Matplotlib, Ggplot2, 
+		Mathematica}
+	
+	\resumeSubItem{\textbf{Database Management:} Basic knowledge of 
+		MySQL, SQLite}
+	
+	\resumeSubItem{\textbf{Other Tools:} GIT, Azure cloud, GitHub, 
+		Excel, Jupyter notebooks}
+	
+	\resumeSubHeadingListEnd
+	
+	% ---
+	\section{Soft Skills}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Critical thinking and problem-solving orientation}
+	
+	\resumeSubItem{Discipline and perseverance}
+	
+	\resumeSubItem{Communication of complex concepts}
+	
+	\resumeSubItem{Intellectual curiosity and lifelong learning}
+	
+	\resumeSubHeadingListEnd
+	
+	\vspace{1em}
+	
+	% ---
+\end{document}
