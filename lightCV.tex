@@ -63,7 +63,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{5pt}\item%-1
+  \vspace{2pt}\item%-1
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -91,11 +91,11 @@
 % For Light theme un-comment this and comment the Dark theme section below
 \colorlet{textcolor}{black}
 \colorlet{urlcolor}{blue}
-\newcommand{\otherThemeRef}{\href{https://github.com/JPBerea/CV/raw/master/darkCV.pdf}{\color{urlcolor}
+\newcommand{\otherThemeRef}{\href{https://github.com/JPBerea/CV/raw/DataEngCV/darkCV.pdf}{\color{urlcolor}
  Tema oscuro {\faicon{lightbulb-o}}}}
-\newcommand{\latestVersion}{\href{https://github.com/JPBerea/CV/raw/master/lightCV.pdf}{\color{urlcolor}
+\newcommand{\latestVersion}{\href{https://github.com/JPBerea/CV/raw/DataEngCV/lightCV.pdf}{\color{urlcolor}
  + reciente {\faicon{refresh}}}}
-\newcommand{\englishVersion}{\href{https://github.com/JPBerea/CV/raw/master/enLightCV.pdf}{\color{urlcolor}Inglés
+\newcommand{\englishVersion}{\href{https://github.com/JPBerea/CV/raw/DataEngCV/enLightCV.pdf}{\color{urlcolor}Inglés
 		{\faicon{language}}}}
 
 \begin{document}
@@ -114,6 +114,7 @@
 % ---
 
 % HEADING
+		\vspace{-0.5pt}
 		\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 		  \textbf{\Large Juan Pablo Cueva Berea}\\ 
 		  %\href{https:wilmerags.com}{\color{urlcolor} \faicon{link}}
@@ -122,8 +123,8 @@
 		  \color{textcolor} jpberea52@gmail.com} \\
 		  \textsl{CDMX, México.} & \href{https://www.linkedin.com/in/jpberea/}{ 
 		  \color{urlcolor}{\faicon{linkedin}} \color{textcolor} jpberea} \\
-		  \textsl{\small \latestVersion} / \textsl{\small \otherThemeRef}/ 
-		  \textsl{\small \englishVersion} & 
+		  \textsl{\small \latestVersion} / \textsl{\small \otherThemeRef} & %/
+		  %\textsl{\small \englishVersion} & 
 		  \color{urlcolor}\faicon{phone} \color{textcolor} 5515025888
 		  %\href{https://github.com/wilmeragsgh}{  
 		  %\color{urlcolor}{\faicon{github}} 
@@ -134,49 +135,52 @@
 		\end{tabular*}
 		
 		% EXPERIENCE
+		\vspace{-10pt}
 		\section{Experiencia}
 		  \resumeSubHeadingListStart
 		  \resumeSubheading
 		  {NTT DATA}{CDMX, México}
 		  {Ingeniero de Datos}{Septiembre 2024 - Actualidad}
 		  \resumeItemListStart
-		  \resumeItem{Realizo transformación, limpieza y preparación de datos para modelos estadísticos y de machine learning.}
-		  \resumeItem{Participo en la productivización e integración de modelos en entornos cloud.}
-		  \resumeItem{Desarrollé una aplicación web para un simulador presupuestal a partir de procesos de ingeniería inversa.}
+		  \resumeItem{Desarrollo y validación de lógicas de procesamiento de datos en entornos \textbf{dev/test (Jupyter)} utilizando \textbf{Apache Spark (PySpark)} y \textbf{Python}, y posterior adaptación a \textbf{casos de uso productivos} bajo arquetipos establecidos}
+		  \resumeItem{Participación en \textbf{pruebas unitarias, integración y volumen} para garantizar la calidad de flujos de datos distribuidos}
+		  \resumeItem{Desarrollo de aplicación web en \textbf{GCP} para automatización de flujos existentes mediante \textbf{ingeniería inversa}}
+		  \resumeItem{Control de versiones y colaboración técnica con \textbf{Git} y \textbf{Bitbucket}.}
+		  \resumeItem{Elaboración de \textbf{documentación técnica} para la operación y mantenimiento de componentes de datos.}
+		  \resumeItem{Trabajo en equipos multidisciplinarios bajo marco ágil \textbf{Scrum}.}
 		  \resumeItemListEnd
-		  \resumeTech{Tecnologías}{Apache Spark, Python, SQL, AWS, GCP, GIT}
+		  
+		  \resumeTech{Tecnologías}{Tecnologías: Apache Spark (PySpark), Python, SQL (Athena), Git/Bitbucket, AWS, GCP}
 		  
 		  \resumeSubheading
 		  {IMASS}{CDMX, México}
 		  {Servicio Social}{Febrero 2023 - Mayo 2024}
 		  \resumeItemListStart
-		  \resumeItem{Implementé algoritmos de análisis estadístico bayesiano.}
-		  \resumeItem{Gestioné el versionado de paquetería de código libre.}
-		  \resumeItem{Realicé investigación y recolección bibliográfica.}
+		  \resumeItem{Implementación de algoritmos estadísticos en \textbf{Python} y \textbf{Julia} con enfoque reproducible.}
+		  \resumeItem{Gestión de \textbf{versionado de código} en entornos colaborativos mediante \textbf{Git}.}
+		  \resumeItem{Documentación técnica y análisis bibliográfico para soporte de desarrollos.}
 		  \resumeItemListEnd
-		  \resumeTech{Tecnologías}{Julia, GIT, Mendeley, Python}
+		  \resumeTech{Tecnologías}{Julia, GIT, Python, Mendeley}
 		  %\sepsection
 		  \resumeSubHeadingListEnd
-		%--
 		% EDUCATION
 		\section{Educación}
 		  \resumeSubHeadingListStart
-		    \resumeSubheading
-		      {Licenciatura en Matemáticas}{CDMX, México}
-		      {Facultad de Ciencias, UNAM}{Fecha de término: noviembre 2024}
-		      \resumeItemListStart
-		      \resumeItem{Análisis Estadístico}
-		      \resumeItem{Análisis y Visualización de Datos}
-		      \resumeItem{Análisis y Optimización de Algoritmos}
-		      \resumeItem{Teoría de la Probabilidad}
-		      \resumeItemListEnd
-		    \resumeSubheading
-		      {Cursos Avanzados de Inglés}{CDMX, México}
-		      {ENALLT}{septiembre 2021 - mayo 2022}
-		      \resumeItemListStart
-		      \resumeItem{Dominio de Inglés (C1)}
-		      \resumeItem{Comprensión y producción: escrita y oral}
-		      \resumeItemListEnd
+		  \resumeSubheading
+		  {Licenciatura en Matemáticas}{CDMX, México}
+		  {Facultad de Ciencias, UNAM}{Fecha de término: noviembre 
+		  	2024}
+		  \resumeItemListStart
+		  \resumeItem{Formación sólida en \textbf{probabilidad y estadística} aplicada}
+		  \resumeItem{Análisis y \textbf{optimización de algoritmos}}
+		  \resumeItem{\textbf{Estructuras discretas y teoría de grafos} aplicadas a problemas computacionales}
+		  \resumeItemListEnd
+		  \resumeSubheading
+		  {Cursos Avanzados de Inglés}{CDMX, México}
+		  {ENALLT}{septiembre 2021 - mayo 2022}
+		  \resumeItemListStart
+		  \resumeItem{Inglés avanzado (C1): comprensión y producción técnica escrita y oral}
+		  \resumeItemListEnd
 		  \resumeSubHeadingListEnd
 		% ---
 		
@@ -184,7 +188,8 @@
 		\section{Certificaciones \color{urlcolor}{(con link)}}
 			\resumeSubHeadingListStart
 			\resumeSubheading{Azure Fundamentals AZ900}{Microsoft}
-			{\href{https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert\&id=414\&cvid=89qXn0LJxMFhiYjy6V0ZaQ==}{\color{urlcolor}Verificación:wnRFY-48Eq}}{Junio 2021}
+			{\href{https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert\&id=414\&cvid=89qXn0LJxMFhiYjy6V0ZaQ==}
+				{\color{urlcolor}Verificación:wnRFY-48Eq}}{Junio 2021}
 			\resumeSubheading{Desarrollo Seguro V2.0}{Net4skills}
 			{\href{https://wallet.xertify.co/certificates/372BBD7FA004}{\color{urlcolor}Verificación:372BBD7FA002}}{Octubre 2024}
 			\resumeSubheading{SAFe 6 Scrum Master}{Scaled Agile Inc}
@@ -196,19 +201,16 @@
 		
 		\resumeSubHeadingListStart
 		
-		\resumeSubItem{\textbf{Lenguajes de programación:} Proficiente uso de  
-		Python, Java, SQL, R}
+		\resumeSubItem{\textbf{Lenguajes:} Python, SQL, Java}
 		
-		\resumeSubItem{\textbf{Bibliotecas para análisis de datos:} Apache Spark, Pandas, 
-		NumPy, Tidyverse}
+		\resumeSubItem{\textbf{Procesamiento de datos:} Apache Spark (PySpark), Pandas, NumPy}
 		
-		\resumeSubItem{\textbf{Visualización de Datos:} Matplotlib, Ggplot2, 
-			Mathematica}
+		\resumeSubItem{\textbf{Bases de datos:} SQL (JOINs, funciones ventana, consultas de metadatos y manejo de particiones) usando \textbf{AWS Athena}}
 		
-		\resumeSubItem{\textbf{Manejo de base de datos:} Manejo básico de 
-		MySQL, SQLite}
 		
-		\resumeSubItem{\textbf{Otras herramientas:} GIT, Jupyter notebooks, Azure cloud, AWS, Excel}
+		\resumeSubItem{\textbf{Sistemas y herramientas:} Linux, Git/Bitbucket, Jupyter, AWS, Intellij IDEs, GCP}
+		
+		\resumeSubItem{\textbf{Metodologías:} Desarrollo ágil (Scrum)}
 		
 		
 		\resumeSubHeadingListEnd
