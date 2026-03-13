@@ -7,46 +7,58 @@
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
+% Encoding (FIXES ACCENTS)
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,english]{babel}
+
+% Page layout
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
 \usepackage{tabularx}
 
-% Page coloring, fonts, and logos
-\usepackage{pagecolor}
+% Colors and links
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+% Typography
+\usepackage{lmodern}
 \usepackage{lato}
 \renewcommand{\familydefault}{\sfdefault}
+
+% Icons
 \usepackage{fontawesome}
-% ---
+
+% Header/footer
+\usepackage{fancyhdr}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
+% Better spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Margins
 \addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
 \urlstyle{same}
-\raggedbottom
+
 \raggedright
+\raggedbottom
+
 \setlength{\tabcolsep}{0in}
-% ---
+
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{1pt}\scshape\raggedright\large
+	\vspace{1pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 % ---
 
@@ -55,35 +67,35 @@
 \newcommand{\sepsection}{\vspace{25pt}}
 
 \newcommand{\resumeItem}[1]{%2
-  \item\small{
-    %\textbf{#1}
-    #1
-    %{: #2 \vspace{-2pt}}
-  }
+	\item\small{
+		%\textbf{#1}
+		#1
+		%{: #2 \vspace{-2pt}}
+	}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{2pt}\item%-1
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+	\vspace{3pt}\item%-1
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
 }
 \newcommand{\resumeSubSubheading}[2]{
-    \vspace{1pt}
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
+	\vspace{1pt}
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-5pt}
 }
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 \renewcommand{\labelitemii}{$\circ$}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \newcommand{\resumeTech}[2]{
- \underline{#1:} #2
+	\underline{#1:} #2
 }
 
 % COLOR THEMES SELECTION
@@ -91,151 +103,156 @@
 % For Light theme un-comment this and comment the Dark theme section below
 \colorlet{textcolor}{black}
 \colorlet{urlcolor}{blue}
-\newcommand{\otherThemeRef}{\href{https://github.com/JPBerea/CV/raw/DataEngCV/darkCV.pdf}{\color{urlcolor}
- Tema oscuro {\faicon{lightbulb-o}}}}
-\newcommand{\latestVersion}{\href{https://github.com/JPBerea/CV/raw/DataEngCV/lightCV.pdf}{\color{urlcolor}
- + reciente {\faicon{refresh}}}}
-\newcommand{\englishVersion}{\href{https://github.com/JPBerea/CV/raw/DataEngCV/enLightCV.pdf}{\color{urlcolor}Inglés
-		{\faicon{language}}}}
+\newcommand{\otherThemeRef}{\href{https://github.com/JPBerea/CV/raw/master/darkCV.pdf}{\color{urlcolor}
+		Tema oscuro}}
+\newcommand{\latestVersion}{\href{https://github.com/JPBerea/CV/raw/master/lightCV.pdf}{\color{urlcolor}
+		+ reciente}}
+\newcommand{\englishVersion}{\href{https://github.com/JPBerea/CV/raw/master/enLightCV.pdf}{\color{urlcolor}Inglés}}
 
 \begin{document}
-% ---
-
-% For Dark theme un-comment this and comment the Light theme section above
-% \colorlet{textcolor}{white!80!gray}
-% \colorlet{backgroundcolor}{black!30!gray}
-% \colorlet{urlcolor}{blue!25!white}
-% \AtBeginDocument{\color{textcolor}}
-% \newcommand{\otherThemeRef}{\href{https://github.com/wilmeragsgh/resume/raw/master/wilmer_gonzalez_light.pdf}{Light \color{urlcolor}{\faicon{lightbulb-o}}}}
-% \newcommand{\latestVersion}{\href{https://github.com/wilmeragsgh/resume/raw/master/wilmer_gonzalez_dark.pdf}{Latest \color{urlcolor}{\faicon{refresh}}}}
-
-% \begin{document}
-% \pagecolor{backgroundcolor}
-% ---
-
-% HEADING
-		\vspace{-0.5pt}
+	% ---
+	
+	% For Dark theme un-comment this and comment the Light theme section above
+	% \colorlet{textcolor}{white!80!gray}
+	% \colorlet{backgroundcolor}{black!30!gray}
+	% \colorlet{urlcolor}{blue!25!white}
+	% \AtBeginDocument{\color{textcolor}}
+	% \newcommand{\otherThemeRef}{\href{https://github.com/wilmeragsgh/resume/raw/master/wilmer_gonzalez_light.pdf}{Light \color{urlcolor}{\faicon{lightbulb-o}}}}
+	% \newcommand{\latestVersion}{\href{https://github.com/wilmeragsgh/resume/raw/master/wilmer_gonzalez_dark.pdf}{Latest \color{urlcolor}{\faicon{refresh}}}}
+	
+	% \begin{document}
+		% \pagecolor{backgroundcolor}
+		% ---
+		
+		% HEADING
 		\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-		  \textbf{\Large Juan Pablo Cueva Berea}\\ 
-		  %\href{https:wilmerags.com}{\color{urlcolor} \faicon{link}}
-		  Egresado de la licenciatura en Matemáticas & 
-		  \href{mailto:jpberea52@gmail.com}{\color{urlcolor}{\faicon{envelope}} 
-		  \color{textcolor} jpberea52@gmail.com} \\
-		  \textsl{CDMX, México.} & \href{https://www.linkedin.com/in/jpberea/}{ 
-		  \color{urlcolor}{\faicon{linkedin}} \color{textcolor} jpberea} \\
-		  \textsl{\small \latestVersion} / \textsl{\small \otherThemeRef} & %/
-		  %\textsl{\small \englishVersion} & 
-		  \color{urlcolor}\faicon{phone} \color{textcolor} 5515025888
-		  %\href{https://github.com/wilmeragsgh}{  
-		  %\color{urlcolor}{\faicon{github}} 
-		  %\color{textcolor} wilmeragsgh}\\
-		  %\href{maybe}{\color{urlcolor}{\faicon{film}} 
-		  %\underline{\textsl{video 
-		  %introduction}}}
+			\textbf{\Large Juan Pablo Cueva Berea} & \href{mailto:jpberea52@gmail.com}{\color{urlcolor} jpberea52@gmail.com} \\
+			Data Engineer \textbar\ PySpark \textbullet\ AWS \textbullet\ Data Pipelines &
+			\href{https://www.linkedin.com/in/jpberea/}{\color{urlcolor} LinkedIn: jpberea} \\
+			Experiencia desarrollando pipelines de datos para procesamiento de información
+			& \color{textcolor} 5515025888\\
+			financiera a gran escala y soporte a modelos de riesgo crediticio.& 
+			\textsl{CDMX, México}
 		\end{tabular*}
 		
 		% EXPERIENCE
-		\vspace{-10pt}
 		\section{Experiencia}
-		  \resumeSubHeadingListStart
-		  \resumeSubheading
-		  {NTT DATA}{CDMX, México}
-		  {Ingeniero de Datos}{Septiembre 2024 - Actualidad}
-		  \resumeItemListStart
-		  \resumeItem{Desarrollo y validación de lógicas de procesamiento de datos en entornos \textbf{dev/test (Jupyter)} utilizando \textbf{Apache Spark (PySpark)} y \textbf{Python}, y posterior adaptación a \textbf{casos de uso productivos} bajo arquetipos establecidos}
-		  \resumeItem{Participación en \textbf{pruebas unitarias, integración y volumen} para garantizar la calidad de flujos de datos distribuidos}
-		  \resumeItem{Desarrollo de aplicación web en \textbf{GCP} para automatización de flujos existentes mediante \textbf{ingeniería inversa}}
-		  \resumeItem{Control de versiones y colaboración técnica con \textbf{Git} y \textbf{Bitbucket}.}
-		  \resumeItem{Elaboración de \textbf{documentación técnica} para la operación y mantenimiento de componentes de datos.}
-		  \resumeItem{Trabajo en equipos multidisciplinarios bajo marco ágil \textbf{Scrum}, mediante \textbf{Jira} para la gestión del desarrollo.}
-		  
-		  \resumeItemListEnd
-		  
-		  \resumeTech{Tecnologías}{Apache Spark (PySpark), Python, SQL (Athena), Bitbucket, Artifactory, Datum, Intellij, AWS, GCP}
-		  
-		  \resumeSubheading
-		  {IMASS}{CDMX, México}
-		  {Servicio Social}{Febrero 2023 - Mayo 2024}
-		  \resumeItemListStart
-		  \resumeItem{Implementación de algoritmos estadísticos en \textbf{Python} y \textbf{Julia} con enfoque reproducible.}
-		  \resumeItem{Gestión de \textbf{versionado de código} en entornos colaborativos mediante \textbf{Git}.}
-		  \resumeItem{Documentación técnica y análisis bibliográfico para soporte de desarrollos.}
-		  \resumeItemListEnd
-		  \resumeTech{Tecnologías}{Julia, GIT, Python, Mendeley}
-		  %\sepsection
-		  \resumeSubHeadingListEnd
+		\resumeSubHeadingListStart
+		\resumeSubheading
+		{NTT DATA}{CDMX, México}
+		{Ingeniero de Datos}{Septiembre 2024 - Actualidad}
+		\resumeItemListStart
+		\resumeItem{Desarrollo de \textbf{pipelines batch} en PySpark para \textbf{procesamiento y transformación de millones de registros financieros} almacenados en \textbf{Data Lake} (parquet, CSV y tablas masterizadas).}
+		\resumeItem{Exploración y \textbf{construcción de variables predictivas} en clusters Spark (AWS EMR / Glue / SageMaker) como soporte al desarrollo de modelos de rating crediticio.}
+		\resumeItem{\textbf{Implementación de lógica de negocio y reglas de transformación de datos} alineadas con requerimientos del área de riesgos financieros y \textbf{estructuración de casos de uso productivos}.}
+		\resumeItem{Validación funcional y técnica de pipelines de datos para asegurar cumplimiento con \textbf{lineamientos regulatorios del sector financiero}.}
+		\resumeItem{Implementación de \textbf{pruebas unitarias y de aceptación} para garantizar calidad y estabilidad de pipelines de datos.}
+		\resumeItem{Automatización de despliegues mediante \textbf{pipelines CI/CD} con Jenkins, utilizando \textbf{Git Flow} (Bitbucket / GitHub) para control de versiones.}
+		\resumeItem{\textbf{Orquestación de ejecuciones batch productivas} mediante Control-M y \textbf{consultas exploratorias sobre el Data Lake} con Amazon Athena.}
+		\resumeItem{Colaboración con equipos de \textbf{riesgos y negocio} para traducir \textbf{requerimientos analíticos y regulatorios} en pipelines de datos y lógica de transformación.}
+		\resumeItemListEnd
+		\resumeTech{Tecnologías}{\textbf{Python}  \textbar\  \textbf{SQL}  \textbar\  \textbf{PySpark}  \textbar\  \textbf{AWS (EMR, Glue, Athena, SageMaker)}  \textbar\  \textbf{Jenkins}  \textbar\  \textbf{Control-M}  \textbar\  \textbf{Git (Bitbucket, GitHub)}}
+		
+		\resumeSubheading
+		{IMASS}{CDMX, México}
+		{Servicio Social}{Febrero 2023 - Mayo 2024}
+		\resumeItemListStart
+		\resumeItem{\textbf{Implementación de algoritmos estadísticos y simulaciones} en Python y Julia bajo prácticas de investigación.}
+		\resumeItem{\textbf{Versionado de código} y \textbf{documentación técnica} para soporte de desarrollos.}
+		\resumeItemListEnd
+		\resumeTech{Tecnologías}{\textbf{Julia}  \textbar\  \textbf{Git}  \textbar\  \textbf{Mendeley}  \textbar\  \textbf{Python}}
+		%\sepsection
+		\resumeSubHeadingListEnd
+		%--
 		% EDUCATION
 		\section{Educación}
-		  \resumeSubHeadingListStart
-		  \resumeSubheading
-		  {Licenciatura en Matemáticas}{CDMX, México}
-		  {Facultad de Ciencias, UNAM}{Fecha de término: noviembre 
-		  	2024}
-		  \resumeItemListStart
-		  \resumeItem{Formación sólida en \textbf{probabilidad y estadística} aplicada}
-		  \resumeItem{Análisis y \textbf{optimización de algoritmos}}
-		  \resumeItem{\textbf{Estructuras discretas y teoría de grafos} aplicadas a problemas computacionales}
-		  \resumeItemListEnd
-		  \resumeSubheading
-		  {Cursos Avanzados de Inglés}{CDMX, México}
-		  {ENALLT}{septiembre 2021 - mayo 2022}
-		  \resumeItemListStart
-		  \resumeItem{Inglés avanzado (C1): comprensión y producción técnica escrita y oral}
-		  \resumeItemListEnd
-		  \resumeSubHeadingListEnd
+		\resumeSubHeadingListStart
+		\resumeSubheading
+		{Licenciatura en Matemáticas}{CDMX, México}
+		{Facultad de Ciencias, UNAM}{Fecha de término: noviembre 2024}
+		\resumeItemListStart
+		\resumeItem{Formación en \textbf{probabilidad, estadística, optimización de algoritmos y estructuras discretas}.}
+		\resumeItemListEnd
+		\resumeSubheading
+		{Cursos Avanzados de Inglés}{CDMX, México}
+		{ENALLT}{septiembre 2021 - mayo 2022}
+		\resumeItemListStart
+		\resumeItem{Inglés avanzado (C1): \textbf{comprensión y producción} técnica escrita y oral}
+		\resumeItemListEnd
+		\resumeSubHeadingListEnd
 		% ---
 		
 		% CERTIFICATIONS
-		\section{Certificaciones \color{urlcolor}{(con link)}}
+		\section{Certificaciones}
+		
+		\begin{minipage}[t]{0.48\textwidth}
+			
 			\resumeSubHeadingListStart
-			\resumeSubheading{Azure Fundamentals AZ900}{Microsoft}
-			{\href{https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert\&id=414\&cvid=89qXn0LJxMFhiYjy6V0ZaQ==}
-				{\color{urlcolor}Verificación:wnRFY-48Eq}}{Junio 2021}
+			\resumeSubheading{Azure Fundamentals (AZ-900)}{Microsoft}
+			{\href{https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert\&id=414\&cvid=89qXn0LJxMFhiYjy6V0ZaQ==}{\color{urlcolor}Verificación: wnRFY-48Eq}}{Junio 2021}
+			
 			\resumeSubheading{Desarrollo Seguro V2.0}{Net4skills}
-			{\href{https://wallet.xertify.co/certificates/372BBD7FA004}{\color{urlcolor}Verificación:372BBD7FA002}}{Octubre 2024}
+			{\href{https://wallet.xertify.co/certificates/372BBD7FA004}{\color{urlcolor}Verificación: 372BBD7FA002}}{Octubre 2024}
+			\resumeSubHeadingListEnd
+			
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.48\textwidth}
+			
+			\resumeSubHeadingListStart
 			\resumeSubheading{SAFe 6 Scrum Master}{Scaled Agile Inc}
 			{\href{https://www.credly.com/badges/14e3126c-fe1d-4d4e-8fcf-6d3c6702ccb0/public_url}{\color{urlcolor}Credly}}{November 2024}
 			\resumeSubHeadingListEnd
+			
+		\end{minipage}
 		
 		% PROGRAMMING SKILLS
 		\section{Habilidades Técnicas}
 		
-		\resumeSubHeadingListStart
-		
-		\resumeSubItem{\textbf{Lenguajes:} Python, SQL, Java}
-		
-		\resumeSubItem{\textbf{Procesamiento de datos:} Apache Spark (PySpark), Pandas, NumPy}
-		
-		\resumeSubItem{\textbf{Bases de datos:} SQL (JOINs, funciones ventana, consultas de metadatos y manejo de particiones) usando \textbf{AWS Athena}}
-		
-		
-		\resumeSubItem{\textbf{Sistemas y herramientas:} Linux, Artifactory, Datum, Bitbucket, Git, GitHub, Jupyter, Intellij IDEs, AWS, GCP}
-		
-		\resumeSubItem{\textbf{Metodologías:} Trabajo ágil bajo \textbf{Scrum} con seguimiento de historias y tareas en \textbf{Jira}.}
-		
-		\resumeSubHeadingListEnd
+		\begin{minipage}[t]{0.48\textwidth}
+			
+			\resumeSubHeadingListStart
+			\resumeSubItem{\textbf{Lenguajes:} Python, SQL, Java, R}
+			
+			\resumeSubItem{\textbf{Data Engineering:} PySpark, Spark, ETL pipelines}
+			
+			\resumeSubItem{\textbf{Cloud:} AWS (EMR, Glue, Athena, SageMaker), Azure}
+			
+			\resumeSubHeadingListEnd
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.48\textwidth}
+			\resumeSubHeadingListStart
+			\resumeSubItem{\textbf{Data Analysis:} Pandas, NumPy, Tidyverse}
+			
+			\resumeSubItem{\textbf{DevOps:} Git, Jenkins, CI/CD, Control-M}
+			
+			\resumeSubItem{\textbf{Visualización:} Matplotlib, ggplot2}
+			
+			\resumeSubHeadingListEnd
+		\end{minipage}
 		% ---
 		
-%		\section{Aptitudes}
-%		\resumeSubHeadingListStart
-%		\resumeSubItem{Pensamiento crítico y orientado a la solución de 
-%			problemas}
-%		
-%		\resumeSubItem{Disciplina y perseverancia}
-%		
-%		\resumeSubItem{Capacidad de comunicar conceptos complejos}
-%		
-%		\resumeSubItem{Curiosidad intelectual y aprendizaje continuo}
-%		
-%		\resumeSubHeadingListEnd
-%		
-%		\vspace{1em}
-
-% PERSONAL PUBLICATIONS
-
-
-%\hfill \textsl{ Not clickable anymore.}
-
-
-% ---
-\end{document}
+		%		\section{Aptitudes}
+		%		\resumeSubHeadingListStart
+		%		\resumeSubItem{Pensamiento crítico y orientado a la solución de 
+			%			problemas}
+		%		
+		%		\resumeSubItem{Disciplina y perseverancia}
+		%		
+		%		\resumeSubItem{Capacidad de comunicar conceptos complejos}
+		%		
+		%		\resumeSubItem{Curiosidad intelectual y aprendizaje continuo}
+		%		
+		%		\resumeSubHeadingListEnd
+		%		
+		%		\vspace{1em}
+		
+		% PERSONAL PUBLICATIONS
+		
+		
+		%\hfill \textsl{ Not clickable anymore.}
+		
+		
+		% ---
+	\end{document}
